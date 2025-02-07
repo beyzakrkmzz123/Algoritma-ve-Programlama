@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner s1=new Scanner(System.in);
+
+        System.out.println("İki basamaklı bir sayı giriniz");
+        int sayi=s1.nextInt();
+
+        String[] birler={"","bir","iki","üç","dört","beş","altı","yedi","sekiz","dokuz"};
+        String[] onlar={"on","yirmi","otuz","kırk","elli","atmış","yetmiş","seksen","doksan"};
+
+        if(sayi!=0) {
+            if(sayi<0) {
+                System.out.print("Eksi ");
+                sayi=Math.abs(sayi); // mutlak değeri
+            }
+
+            int basamak_on=sayi/10;
+            int basamak_bir=sayi % 10;
+            System.out.print(onlar[basamak_on-1]);
+            System.out.print(" ");
+            System.out.print(birler[basamak_bir]);
+
+
+
+        }else {
+            System.out.println("Sıfır");
+        }
+    }
+}

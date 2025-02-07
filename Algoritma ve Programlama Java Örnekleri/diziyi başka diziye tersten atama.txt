@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in) ;
+        System.out.println(" dizinin eleman sayısını giriniz: ");
+        int n= scan.nextInt();
+        int[] duz=new int[n];
+        int[] ters=new int[n];
+        for (int i=0;i< duz.length;i++){
+            System.out.println((i+1) + ". elemanı giriniz: ");
+            duz[i] = scan.nextInt();
+            int sayac=n-1-i;
+            ters[sayac]= duz[i];
+        }
+        System.out.println("dizi elemanlarının tersi: ");
+        for (int j=0;j< ters.length;j++){
+        System.out.println(ters[j] +" ");
+    }}
+}

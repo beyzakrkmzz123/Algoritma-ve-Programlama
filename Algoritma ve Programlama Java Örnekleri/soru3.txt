@@ -1,0 +1,28 @@
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int a;
+        Scanner okuyucu=new Scanner(System.in);
+
+        System.out.print("Lütfen a tam sayısını giriniz :");
+        a=okuyucu.nextInt();
+
+        int sayac=1;
+        /*
+        while (sayac<=a) {
+            if(a % sayac==0) {
+                System.out.print(sayac+" ");
+            }
+            sayac++;
+        }
+        */
+
+        for (int i=1; i<=a; i++) {
+            if(a % i==0) {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}

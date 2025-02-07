@@ -1,0 +1,42 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner okuyucu = new Scanner(System.in);
+
+        System.out.println("Bir sayi giriniz");
+        int sayi=okuyucu.nextInt();
+
+        int[] dizi = new int[sayi];
+
+        for (int i=0; i<sayi; i++) {
+            System.out.println(i+1 + ". sayıyı giriniz");
+            dizi[i]=okuyucu.nextInt();
+        }
+
+        System.out.println(Arrays.toString(dizi));
+        dizi=dizi_islem(dizi);
+        System.out.println(Arrays.toString(dizi));
+
+
+
+    /*
+        for (int j=0; j<dizi.length; j++) {
+            dizi[j] = dizi[j]*3;
+            System.out.println(dizi[j]);
+        }
+    */
+
+    }
+
+    static int[] dizi_islem (int[] dizi) {  // giriş olarak dizi alıp tekrar bir dizi döndüren metot7
+
+        for (int j=0; j<dizi.length; j++) {
+            dizi[j] = dizi[j]*3;
+        }
+        return dizi;
+
+    }
+}

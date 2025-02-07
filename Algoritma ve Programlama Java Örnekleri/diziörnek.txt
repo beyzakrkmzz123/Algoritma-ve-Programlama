@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String [] arabalar={"Mercedes", "Toyota", "Mazda", "Tesla","BMW", "Şahin","TOGG","Anadol"};
+        String [] hediyeler = new String[100];
+
+        hediyeler[90]="Saat";
+        hediyeler[29]="Kalem";
+
+        //System.out.println(arabalar[3]);
+    /*
+        for (int i=1; i<arabalar.length; i++) {
+            System.out.println(arabalar[i]);
+        }
+    */
+        //arabalar[7]="Toros";
+       for(String araba: arabalar) {
+           System.out.println(araba);
+       }
+
+
+    }
+}

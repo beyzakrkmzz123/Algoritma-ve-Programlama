@@ -1,0 +1,17 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+       Scanner kullanici= new Scanner(System.in);
+        System.out.print("DİZİ BOYUTUNU GİRİNİZ: ");
+        int n= kullanici.nextInt();
+        int[]dizi =new int[n];
+        for (int i=0;i< dizi.length;i++){
+            System.out.print("DİZİ[" +i+ "]: ");
+            dizi[i] = kullanici.nextInt();
+        }
+        System.out.println("DİZİNİN KÜÇÜKTEN BÜYÜĞE SIRALANIŞI: ");
+        Arrays.sort(dizi);
+        System.out.println(Arrays.toString(dizi));
+    }
+}

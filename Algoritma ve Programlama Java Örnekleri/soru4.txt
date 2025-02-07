@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner okuyucu=new Scanner(System.in);
+
+        System.out.println("Kuvveti alınacak sayıyı giriniz");
+        int sayi=okuyucu.nextInt();
+
+        System.out.println("Kuvveti giriniz");
+        int kuvvet=okuyucu.nextInt();
+
+        int carpim=1;
+        for (int i=1;i<=kuvvet;i++) {
+            carpim=carpim*sayi; // carpım*=sayi;
+        }
+        System.out.println("Bulunan sonuc :" + carpim);
+    }
+}

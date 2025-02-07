@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int s1,s2,s3;
+        Scanner okuyucu=new Scanner(System.in);
+
+        System.out.print("Lütfen 1. sayıyı giriniz :");
+        s1=okuyucu.nextInt();
+
+        System.out.print("Lütfen 2. sayıyı giriniz :");
+        s2=okuyucu.nextInt();
+
+        System.out.print("Lütfen 3. sayıyı giriniz :");
+        s3=okuyucu.nextInt();
+
+        if(s1<=s2 && s2<=s3) {
+            System.out.println(s1+" "+s2+ " "+ s3);
+        }else if(s1<=s3 && s3<=s2) {
+            System.out.println(s1+" "+s3+ " "+ s2);
+        }else if(s2<=s1 && s1<=s3) {
+            System.out.println(s2+" "+s1+ " "+ s3);
+        }else if(s3<=s1 && s1<=s2) {
+            System.out.println(s3+" "+s1+ " "+ s2);
+        }else if(s2<=s3 && s3<=s1) {
+            System.out.println(s2+" "+s3+ " "+ s1);
+        }else if(s3<=s2 && s2<=s1) {
+            System.out.println(s3+" "+s2+ " "+ s1);
+        }
+    }
+}

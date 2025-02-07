@@ -1,0 +1,37 @@
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner s1=new Scanner(System.in);
+        System.out.println("N giriniz :");
+        int n=s1.nextInt();
+
+        int[] a= new int[n];
+        int[] b= new int[n];
+        int[] c= new int[n];
+
+        for (int i=0; i<n; i++) {
+            System.out.println("1. dizinin "+ (i+1) + ". elemanını girin");
+            a[i]=s1.nextInt();
+        }
+
+        for (int i=0; i<n; i++) {
+            System.out.println("2. dizinin "+ (i+1) + ". elemanını girin");
+            b[i]=s1.nextInt();
+        }
+
+        for (int i=0; i<n; i++) {
+            c[i]=a[i]+b[i];
+        }
+
+        System.out.println(Arrays.toString(c));
+
+
+
+
+
+    }
+}

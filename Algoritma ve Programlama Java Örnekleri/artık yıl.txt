@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner okuyucu=new Scanner(System.in);
+        System.out.println("Yılı giriniz");
+        int yil=okuyucu.nextInt();
+
+        if(((yil%4==0) && !(yil%100==0)) || (yil%400==0)) {
+            System.out.println("29");
+        }else {
+            System.out.println("28");
+        }
+
+    }
+}

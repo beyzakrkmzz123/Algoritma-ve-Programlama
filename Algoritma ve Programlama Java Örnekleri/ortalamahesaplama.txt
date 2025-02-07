@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        int toplam=0;
+        Scanner okuyucu=new Scanner(System.in);
+
+        System.out.println("Kaç adet sayının ortalaması hesaplanacak");
+        int adet=okuyucu.nextInt();
+
+        for(int i=1; i<=adet; i++) {
+            System.out.print("Lütfen "+ i +". sayıyı giriniz :");
+            toplam= toplam + okuyucu.nextInt(); // toplam+=okuyucu.nextInt();
+        }
+        double ortalama =toplam/adet;
+
+        System.out.println("Sayı adeti :" + adet);
+        System.out.println("Toplam :" + toplam );
+        System.out.println("Ortalama :" + ortalama );
+
+
+
+
+       // double ortalama= (s1+s2+s3+s4+s5)/5;
+     //  System.out.println("Ortalama :" + ortalama);
+    }
+}

@@ -1,0 +1,41 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+        diktortgen_yap(3,5);
+        String[][] dizi=diktortgen_dizi(3,5);
+
+        System.out.println(Arrays.toString(dizi[3]));
+
+
+    }
+
+    static void diktortgen_yap(int a, int b) {
+
+        for (int i=0; i<a; i++) {
+            for (int j=0; j<b; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+
+
+    }
+
+    static String [][] diktortgen_dizi(int a, int b) {
+
+        String[][] dik_dizi = new String[a][b];
+        for (int i=0; i<a; i++) {
+            for (int j=0; j<b; j++) {
+                dik_dizi[i][j]="#";
+            }
+        }
+        return dik_dizi;
+
+    }
+
+
+}

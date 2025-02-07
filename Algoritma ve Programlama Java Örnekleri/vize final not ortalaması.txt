@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner kullanici= new Scanner(System.in);
+        System.out.print("Dersin adını giriniz: ");
+        String dersAdi = kullanici.nextLine();
+        System.out.print("Derse ait kaç adet değerlendirme kriteri var? ");
+        int kriterSayisi = kullanici.nextInt();
+        String[] kriterAdlari = new String[kriterSayisi];
+        int[] kriterEtkileri = new int[kriterSayisi];
+        for (int i = 0; i < kriterSayisi; i++) {
+            System.out.print((i + 1) + ". Kriterin adı nedir: ");
+            kriterAdlari[i] = kullanici.next();
+            System.out.print((i + 1) + ". Kriterin etkisi: ");
+            kriterEtkileri[i] = kullanici.nextInt();
+        }
+        System.out.print("Kaç öğrenci notu gireceksiniz: ");
+        int ogrenciSayisi = kullanici.nextInt();
+        String[] adlar = new String[ogrenciSayisi];
+        String[] soyadlar = new String[ogrenciSayisi];
+        int[] notlar = new int[kriterSayisi];
+        double[] ortalamaNotlar = new double[ogrenciSayisi];
+        for (int i = 0; i < ogrenciSayisi; i++) {
+            System.out.print((i + 1) + ". Öğrencinin adı soyadı: ");
+            adlar[i] = kullanici.next();
+            soyadlar[i] = kullanici.next();
+            for (int j = 0; j < kriterSayisi; j++) {
+                System.out.print((i + 1) + ". Öğrencinin " + kriterAdlari[j] + " notu: ");
+                notlar[j] = kullanici.nextInt();
+            }
+            // Ortalama hesapla
+            ortalamaNotlar[i] = 0;
+            for (int j = 0; j < kriterSayisi; j++) {
+                ortalamaNotlar[i] += notlar[j] * kriterEtkileri[j] / 100;
+            }
+        }
+        // Tabloyu yazdır
+        System.out.println("\nAdı\tSoyadı\t" + String.join("\t", kriterAdlari) + "\tOrtalama");
+        for (int i = 0; i < ogrenciSayisi; i++) {
+            System.out.print(adlar[i] + "\t" + soyadlar[i]);
+            for (int j = 0; j < kriterSayisi; j++) {
+                System.out.print("\t" + notlar[j]);
+            }
+            System.out.printf("\t%.2f\n", ortalamaNotlar[i]);
+        }
+
+
+    }}

@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        
+
+        for (int i = 0; i <= 10; i = i + 2) {
+            System.out.println(i);
+        }
+
+
+
+
+        Scanner okuyucu=new Scanner(System.in);
+        int i=0;
+        int tutulan_sayi=(int)(Math.random()*101);
+        int tahmin=0;
+        while(tutulan_sayi!=tahmin) {
+            //System.out.println("Ben bir ceviz ağacıyım gülhane parkında");
+            System.out.print("Tuttuğum sayıyı söyle :");
+            tahmin=okuyucu.nextInt();
+
+            if(tutulan_sayi>tahmin) {
+                System.out.println("Yukarı çık");
+            } else if (tutulan_sayi<tahmin) {
+                System.out.println("Aşağı in");
+            }
+        }
+        System.out.println("Tebrikler");
+    }
+}

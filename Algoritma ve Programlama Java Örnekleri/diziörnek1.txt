@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int[] rastgele_sayilar = new int[20];
+        int bulundu=0; // aranan sayı  bulunmadı olarak işaretlendi.
+        int konum=0;
+
+        for(int i=0; i<20; i++) {
+            rastgele_sayilar[i]=(int)(Math.random()*100);
+        }
+
+        System.out.println(Arrays.toString(rastgele_sayilar));
+        Arrays.sort(rastgele_sayilar);
+        System.out.println(Arrays.toString(rastgele_sayilar));
+
+        System.out.print("Lütfen aranacak sayıyı giriniz(0-100) :");
+        int aranan_sayi= scn.nextInt();
+
+        int sayac=0;
+        for(int eleman : rastgele_sayilar) {
+            if(eleman==aranan_sayi) {
+                bulundu=1;
+                konum=sayac;
+
+            }
+            sayac++;
+        }
+
+        if(bulundu==1) {
+            System.out.println("Bulundu. Konumu :" + konum );
+        }else {
+            System.out.println("Bulunamadı");
+        }
+
+
+
+    }}

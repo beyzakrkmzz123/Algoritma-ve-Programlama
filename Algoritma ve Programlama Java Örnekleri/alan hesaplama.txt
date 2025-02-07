@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner okuyucu = new Scanner(System.in);
+        System.out.print("Bir a kenarı giriniz :");
+        double a=okuyucu.nextDouble();
+        System.out.println();
+        System.out.print("A kenarına ait yükseklik giriniz :");
+        double h=okuyucu.nextDouble();
+
+        double alan=a*h/2;
+
+        System.out.printf("Kenar uzunluğu: %.1f Yükseklik : %.1f Alan: %.2f", a,h,alan);
+    }
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("SİSTEME DİZİ UZUNLUĞUNU GİRİNİZ: ");
+        int n= scan.nextInt();
+        int enBuyuk=0; // bu kodun önemli kısmı bu değere en küçük ifadeyi varmek
+        int [] dizi= new int[n];
+        for (int i=0;i<dizi.length;i++) {
+            System.out.print((i + 1) + ". DİZİYİ GİRİNİZ: ");
+            dizi[i] = scan.nextInt();
+            if (dizi[i] > enBuyuk) {
+                enBuyuk= dizi[i];
+            }
+        }
+        System.out.println("BU DİZİDEKİ EN BÜYÜK SAYI:" + enBuyuk);
+    }}
